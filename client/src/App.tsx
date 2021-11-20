@@ -36,7 +36,7 @@ type Result = {
   emailValidationResult: EmailValidationResult;
 };
 
-function App () {
+export function App () {
   const [validationHistory, setValidationHistory] = useState<
     ValidationHistoryEntry[]
   >([])
@@ -45,7 +45,7 @@ function App () {
   useEffect(() => {
     (async () => {
       setValidationHistory(
-        (await localforage.getItem('VALIDATION_HISTORY')) ?? []
+        (await localforage.getItem('VALIDATION_HISTORY')) || []
       )
     })()
   }, [])
@@ -138,5 +138,3 @@ const ResultTable = ({ obj }: { obj: Record<string, any> }) => (
     </TableContainer>
   </div>
 )
-
-export default App
