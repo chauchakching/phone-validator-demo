@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { Injectable } from '@nestjs/common';
+import { axiosInstanceWithLogger } from 'src/axiosUtil';
 
 @Injectable()
 export class MailboxlayerService {
@@ -11,7 +11,7 @@ export class MailboxlayerService {
     this.accessKey = accessKey;
   }
   async validateEmail(email: string) {
-    const response = await axios.get(
+    const response = await axiosInstanceWithLogger.get(
       'http://apilayer.net/api/check',
       {
         params: {
