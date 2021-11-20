@@ -37,9 +37,7 @@ function App () {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
-    console.log(data)
     const phone = (data.get('phone') as string) || ''
-    console.log('phone:', phone)
     if (!phone) return
 
     // call api to validate phone
