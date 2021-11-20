@@ -14,4 +14,9 @@ export class AppController {
   getValidatePhone(@Param('phone') phone: string): Promise<Object> {
     return this.appService.validatePhone(phone);
   }
+
+  @Get('validateEmail/:email')
+  getValidateEmail(@Param('email') phone: string): Promise<Object> {
+    return this.appService.validateEmail(phone);
+  }
 }

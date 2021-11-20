@@ -4,6 +4,7 @@ import { LoggerModule } from 'nestjs-pino';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { NumberifyService } from './numberify/numberify.service';
+import { MailboxlayerService } from './mailboxlayer/mailboxlayer.service';
 
 @Module({
   imports: [
@@ -23,6 +24,6 @@ import { NumberifyService } from './numberify/numberify.service';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService, NumberifyService],
+  providers: [AppService, NumberifyService, MailboxlayerService],
 })
 export class AppModule {}
