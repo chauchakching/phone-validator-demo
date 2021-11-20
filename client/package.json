@@ -9,10 +9,12 @@
     "lint:fix": "eslint --fix src/**/*.ts"
   },
   "dependencies": {
+    "@emotion/css": "^11.5.0",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
     "@mui/material": "^5.1.1",
     "axios": "^0.24.0",
+    "fp-ts": "^2.11.5",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },
